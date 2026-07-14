@@ -63,7 +63,6 @@ print("Q5 - vector top5:", vec_files)
 print("Q5 - text top5  :", txt_files)
 print("Q5 - in vector but not text:", only_in_vector)
 
-
 # ---------- Q6: hybrid search (RRF) ----------
 def rrf(result_lists, k=60, num_results=5):
     scores = {}
@@ -75,7 +74,6 @@ def rrf(result_lists, k=60, num_results=5):
             docs[key] = doc
     ranked = sorted(scores, key=scores.get, reverse=True)
     return [docs[key] for key in ranked[:num_results]]
-
 
 q6_query = "How do I give the model access to tools?"
 q6_vec = embedder.encode(q6_query)
